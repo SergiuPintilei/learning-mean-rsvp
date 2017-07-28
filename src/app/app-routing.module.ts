@@ -1,3 +1,5 @@
+import { UpdateEventComponent } from './pages/admin/update-event/update-event.component';
+import { CreateEventComponent } from './pages/admin/create-event/create-event.component';
 import { EventComponent } from './pages/event/event.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { AdminGuard } from './auth/admin.guard';
@@ -30,6 +32,14 @@ const routes: Routes = [
       {
         path: '',
         component: AdminComponent
+      },
+      {
+        path: 'event/new',
+        component: CreateEventComponent
+      },
+      {
+        path: 'event/update/:id',
+        component: UpdateEventComponent
       }
     ]
   }
